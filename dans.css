@@ -1,4 +1,4 @@
-#header {
+.header {
   background-color: #2B823A;
   text-align: center;
   color: #88CC88;
@@ -6,7 +6,7 @@
 
 }
 
-#side-nav {
+.side-nav {
   color: #41817F;
   font-weight: bold;
   display: flex;
@@ -19,30 +19,31 @@
   flex-direction: column;
   text-align: center;
   padding-top: 30px;
-  
+
 }
 
-#side-nav ul {
+.side-nav ul {
   text-align: center;
-  
+
 }
 
-#side-nav li {
+.side-nav li {
   text-align: center;
   display: inline-block;
-  
+
+
 }
 
-#side-nav a:link {
+.side-nav a:link {
   color: #41817F;
   text-decoration: none;
 }
 
-#side-nav a:visited {
+.side-nav a:visited {
   color: #41817F;
 }
 
-#side-nav a:hover {
+.side-nav a:hover {
   color: #012E34;
   background-color: #41817F;
 }
@@ -52,20 +53,24 @@
 
 }
 
-#side-nav ul li a:link {
+.side-nav ul li a:link {
   color: #41817F;
 }
 
-#h1 {
+.h1 {
   background-color: #2B823A;
   color: #82C38D;
 }
 
-#h2 {
+.h2 {
   color: #FFD1AA;
 }
 
-#h3 {
+.h2-wrapper {
+  text-align: center;
+}
+
+.h3 {
   color: #88CC88;
   /*color: #5AAC56;*/
 }
@@ -73,25 +78,36 @@
 html,
 body {
   height: 100%;
-  
+
 }
 
+.gt {
+  white-space: nowrap;
+}
 
+.gt * {
+  display: inline;
+}
 
 body {
-  background-color: #282c34;
-  margin: 0;
+  background-color: #012E34;
+  /*
+  margin: 0; does something..
+  */
   font-family: courier;
   overflow: hidden;
 }
 
-#main {
+
+
+
+.main {
   display: block;
   height: 96%;
   padding-top: 20px;
 }
 
-#profile {
+.profile {
   background-image: url(hmmPROFILEpic.jpg);
   background-repeat: no-repeat;
   background-size: 85% 100%;
@@ -99,7 +115,7 @@ body {
   background-position: center;
 }
 
-#left {
+.left {
   float: left;
   max-width: 12%;
   width: 12%;
@@ -108,76 +124,80 @@ body {
   position: fixed;
 }
 
-#left-wrapper {
+.left-wrapper {
+
+  /*
   border: 1px solid;
   border-color: #41817F;
+  */
   height: 100%;
 }
 
 /* -- -- -- -- */
 
-#right {
+.right {
   float: right;
   width: 88%;
+  /*because nav takes up 12%*/
   height: 100%;
+  /*
   background-color: #282c34;
-  /* -- -- -- -- */ /* -- -- -- -- */ /* -- -- */
+  */
+  background-color: #012E34;
   overflow-y: scroll;
-  scrollbar-width:thin;
-  scrollbar-color: #88CC88 #282c34;
-  /* -- -- -- -- */ /* -- -- -- -- */ /* -- -- */
-  
+  scrollbar-width: thin;
+  scrollbar-color: #88CC88 #012E34;
+  /* second number is proper background */
 }
 
-#right-right {
+.right-right {
   width: 46%;
   float: right;
   height: 100%;
   color: #D3D3D3;
-  /*border-right: dashed;*/
-  /* -- -- -- -- */ /* -- -- -- -- */ /* -- -- */
+  background-color: #282c34;
+  padding-left: 20px;
   overflow-y: scroll;
-  scrollbar-width:thin;
+  scrollbar-width: thin;
   scrollbar-color: #88CC88 #282c34;
-  /* -- -- -- -- */ /* -- -- -- -- */ /* -- -- */
 }
 
-#right-right a {
+.right-right a {
   color: #5AAC56;
 }
 
-#a {
+.a {
   color: #5AAC56;
 }
 
-#right-right-wrapper {
+.right-right-wrapper {
   padding-top: 13px;
   padding-right: 15px;
   margin-right: 25px;
 }
 
-#right-left {
+.right-left {
   width: 48%;
   float: left;
   height: 100%;
   /*border-right: 1px dashed;*/
-  
-  /* -- -- -- -- */ /* -- -- -- -- */ /* -- -- */
   overflow-y: scroll;
   scrollbar-width: thin;
   scrollbar-color: #88CC88 #282c34;
-  /* -- -- -- -- */ /* -- -- -- -- */ /* -- -- */
   border-color: #88CC88;
   color: #D3D3D3;
+  background-color: #282c34;
+
+
 }
 
-#right-left-wrapper {
+.right-left-wrapper {
   padding-top: 13px;
   padding-left: 30px;
   padding-right: 30px;
 }
 
-#main-wrapper {
+.main-wrapper {
   padding-left: 45px;
   padding-right: 45px;
   padding-bottom: 45px;
@@ -186,28 +206,31 @@ body {
 
 /* title content for RR-text */
 
-#rct {
+.rct {
   color: #D4726A;
 }
 
 /* specifics text color */
 
-#rs {
+.rs {
   /*color: #FFB0AA;*/
   color: #88CC88;
 }
 
-rs{color: #88CC88;}
-
-/*
-#table-wrapper{}*/
-
-#table {
-  width: 100%;
+rs {
+  color: #88CC88;
 }
 
-#td,
-th {
+.table {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+
+}
+
+.td,
+.th {
   border: 1px solid grey;
   padding-left: 20px;
   padding-right: 20px;
@@ -215,7 +238,22 @@ th {
   color: grey;
 }
 
-#form {
+th {
+  color: #88CC88;
+  word-wrap: break-word;
+  padding-left: 15px;
+  padding-right: 15px;
+
+}
+
+table {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+
+.form {
   max-width: 400px;
   margin: 50px auto;
   padding: 16px;
@@ -224,15 +262,14 @@ th {
   border-color: #550600;
   border: 1px dashed;
   height: 55%;
-  
 
 }
 
-#form-wrapper {
+.form-wrapper {
   width: 99%;
 }
 
-#form input[type="text"] {
+.form input[type="text"] {
   margin-top: 5px;
   margin-bottom: 5px;
   width: 100%;
@@ -240,7 +277,7 @@ th {
   color: white;
 }
 
-#form input[type="email"] {
+.form input[type="email"] {
   margin-top: 5px;
   margin-bottom: 5px;
   width: 100%;
@@ -248,7 +285,7 @@ th {
   color: white;
 }
 
-#form input[type="number"] {
+.form input[type="number"] {
   margin-top: 5px;
   margin-bottom: 5px;
   width: 100%;
@@ -256,7 +293,7 @@ th {
   color: white;
 }
 
-#form input[name="email"] {
+.form input[name="email"] {
   margin-top: 5px;
   margin-bottom: 5px;
   width: 100%;
@@ -264,8 +301,8 @@ th {
   color: white;
 }
 
-#form textarea input[type="text"],
-#form textarea {
+.form textarea input[type="text"],
+.form textarea {
   margin-top: 10px;
   box-sizing: border-box;
   outline: none;
@@ -278,42 +315,60 @@ th {
 }
 
 .scroller {
+
   scrollbar-color: #282c34 #282c34;
   overflow-y: scroll;
-  width:thin;
+  width: thin;
 }
 
 scroller {
   scrollbar-color: #282c34;
   overflow: hidden;
-  scrollbar-width:thin;
+  scrollbar-width: thin;
   visibility: hidden;
 }
 
-#scrollable-element{overflow: hidden;
-  visibility: hidden;
-}
-scrollable-element{overflow: hidden;
-  visibility: hidden;
-}
-
-
-
-body::-webkit-scrollbar{width: 1em;}
-body::-webkit-scrollbar-track{-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.3);}
-body::webkit-scrollbar-thumb{background-color: darkgrey;
-  outline:1px solid slategrey;
-  overflow: hidden;
-  visibility: hidden;
-  -ms-overflow-style:none;
-  
-}
-
-body::-moz-scrollbar{width: 1em;}
-body::-moz-scrollbar-track{-moz-box-shadow:inset 0 0 6px rgba(0,0,0,0.3);}
-body::moz-scrollbar-thumb{background-color: darkgrey;
-  outline:1px solid slategrey;
+.scrollable-element {
   overflow: hidden;
   visibility: hidden;
 }
-  
+
+scrollable-element {
+  overflow: hidden;
+  visibility: hidden;
+}
+
+/*
+
+body::-webkit-scrollbar {
+  width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+  overflow: hidden;
+  visibility: hidden;
+  -ms-overflow-style: none;
+
+}
+
+body::-moz-scrollbar {
+  width: 1em;
+}
+
+body::-moz-scrollbar-track {
+  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::moz-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+  overflow: hidden;
+  visibility: hidden;
+}
+*/
